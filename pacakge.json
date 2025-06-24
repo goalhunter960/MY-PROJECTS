@@ -1,0 +1,11 @@
+{
+  "name": "taskgenius",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.2"
+  }
+}

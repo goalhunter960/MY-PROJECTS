@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^3.12.12",
+    "zod": "^3.22.2",
+    "@hono/zod-validator": "^0.1.0",
+    "@hono/node-server": "^1.0.0",
+    "drizzle-orm": "^0.44.2",
+    "@neondatabase/serverless": "^0.4.26",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "tsx": "^3.12.7"
+  }
+}
