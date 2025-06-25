@@ -1,14 +1,13 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { clerkMiddleware } from '@clerk/nextjs/server'
 
-const publicRoutes = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)'])
-
-export default clerkMiddleware(async (auth, req) => {
-  if (!publicRoutes(req)) {
-    await auth.protect()  // <-- updated here
-  }
+export default clerkMiddleware((auth, req) => {
+  return auth().then((session) => {
+    if (!session.userId) {
+      return new Response('Unauthorized', { status: 401 })
+    }
+  })
 })
 
 export const config = {
-  matcher: ['/((?!_next|static|favicon.ico).*)', '/api(.*)'],
+  matcher: ['/((?!_next|.*\\..*).*)'],
 }
-
