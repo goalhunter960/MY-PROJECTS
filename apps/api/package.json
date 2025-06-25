@@ -8,15 +8,23 @@
     "build": "tsc",
     "start": "node build/index.js"
   },
-  "keywords": ["api", "hono", "typescript", "serverless"],
+  "keywords": [
+    "api",
+    "hono",
+    "typescript",
+    "serverless"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
     "@hono/node-server": "^1.14.4",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.2",
     "hono": "^4.0.0",
-    "dotenv": "^16.5.0"
+    "pg": "^8.16.2"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.31.2",
     "tsx": "^4.7.0",
     "typescript": "^5.4.5"
   },
@@ -24,4 +32,3 @@
     "node": ">=18"
   }
 }
-
